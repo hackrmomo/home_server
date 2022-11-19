@@ -5,3 +5,5 @@
 - mail.hackrlabs.dev (dev mail server)
 - alahdal.ca
 - mail.alahdal.ca
+- admin.mohammad.dev
+- gitea.hackrlabs.dev
