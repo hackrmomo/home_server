@@ -11,7 +11,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(hackrlabs.dev mail.hackrlabs.dev alahdal.ca mail.alahdal.ca mohammad.dev db.mohammad.dev admin.mohammad.dev gitea.hackrlabs.dev) # add admin
+domains=(hackrlabs.dev mail.hackrlabs.dev alahdal.ca mail.alahdal.ca mohammad.dev db.mohammad.dev admin.mohammad.dev gitea.hackrlabs.dev studio.mohammad.dev) # add admin
 rsa_key_size=4096
 data_path="./data/certbot"
 email=$EMAIL # Adding a valid address is strongly recommended
