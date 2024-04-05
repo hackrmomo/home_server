@@ -1,0 +1,25 @@
+version: '3.9'
+networks:
+  games:
+    external: true
+  web:
+    external: true  
+services:
+  reverse-proxy:
+    image: traefik:v2.11
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '8080:8080'
+      - '443:443'
+      - '7777:7777/udp'
+      - '15000:15000/udp'
+      - '15777:15777/udp'
+      - '25565:25565'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik:/etc/traefik
+      - ./letsencrypt:/etc/letsencrypt
+    networks:
+      - games
+      - web

@@ -1,0 +1,14 @@
+udp:
+  routers:
+    satisfactory0:
+      service: satisfactory0
+      entryPoints:
+        - satisfactory0
+    satisfactory1:
+      service: satisfactory1
+      entryPoints:
+        - satisfactory1
+    satisfactory2:
+      service: satisfactory2
+      entryPoints:
+        - satisfactory2

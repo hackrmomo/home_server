@@ -1,0 +1,12 @@
+udp:
+  services:
+    minecraft:
+      loadBalancer:
+        servers:
+          - address: "minecraft:25565"
+tcp:
+  services:
+    minecraft:
+      loadBalancer:
+        servers:
+          - address: "minecraft:25565"

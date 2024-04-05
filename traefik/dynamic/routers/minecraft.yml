@@ -1,0 +1,12 @@
+udp:
+  routers:
+    minecraft:
+      service: minecraft
+      entryPoints:
+        - minecraft
+tcp:
+  routers:
+    minecrafttcp:
+      service: minecraft
+      entryPoints:
+        - minecrafttcp

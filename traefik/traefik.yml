@@ -1,0 +1,39 @@
+certificatesResolvers:
+  letsencrypt:
+    acme:
+      email: "hackr@hackr.sh"
+      storage: "/etc/letsencrypt/acme.json"
+      httpChallenge:
+        entryPoint: "web"
+api:
+  insecure: true
+  dashboard: true
+providers:
+  file:
+    directory: "/etc/traefik/dynamic"
+    watch: true
+entryPoints:
+  web:
+    address: ":80"
+    transport:
+      respondingTimeouts:
+        readTimeout: 300s
+        writeTimeout: 300s
+        idleTimeout: 300s
+  websecure:
+    address: ":443"
+    transport:
+      respondingTimeouts:
+        readTimeout: 300s
+        writeTimeout: 300s
+        idleTimeout: 300s
+  satisfactory0:
+    address: ":7777/udp"
+  satisfactory1:
+    address: ":15000/udp"
+  satisfactory2:
+    address: ":15777/udp"
+  minecraft:
+    address: ":25565/udp"
+  minecrafttcp:
+    address: ":25565"

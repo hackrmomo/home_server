@@ -1,0 +1,14 @@
+udp:
+  services:
+    satisfactory0:
+      loadBalancer:
+        servers:
+          - address: "satisfactory:7777"
+    satisfactory1:
+      loadBalancer:
+        servers:
+          - address: "satisfactory:15000"
+    satisfactory2:
+      loadBalancer:
+        servers:
+          - address: "satisfactory:15777"
