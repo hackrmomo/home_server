@@ -1,0 +1,12 @@
+http:
+  routers:
+    mail.alahdal.ca:
+      rule: Host(`mail.alahdal.ca`)
+      service: mail-alahdal
+      middlewares:
+        - mail-alahdal
+        - auto-https
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: letsencrypt

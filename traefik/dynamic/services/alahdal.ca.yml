@@ -1,0 +1,6 @@
+http:
+  services:
+    mail-alahdal:
+      loadBalancer:
+        servers:
+          - url: "http://mail.alahdal.ca:80"

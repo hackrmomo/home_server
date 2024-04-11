@@ -1,0 +1,7 @@
+http:
+  middlewares:
+    mail-alahdal:
+      redirectRegex:
+        regex: "^https://mail.alahdal.ca(.*)"
+        replacement: "https://mail.proton.me$1"
+        permanent: true
